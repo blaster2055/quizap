@@ -1,0 +1,28 @@
+
+<form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+ 
+
+     <label for="name">Name </label>
+     <input type="text" id="name" name="name" formControlName="name">
+
+   <div formArrayName="skills">
+    <div *ngFor="let skill of skills.controls; let i=index">
+      <div [formGroupName]="i">
+                                 {{i}}
+
+        <input type="text" formControlName="skill">
+
+        <input type="text" formControlName="exp">
+        <p>
+          <button type="button" (click)="addSkills()">Add</button>
+        </p>
+         
+        <button (click)="removeSkill(i)">Remove</button>
+      </div>
+    </div>
+  <p>
+     <button type="submit">Submit</button>
+   </p>
+   
+    </div>
+ </form>

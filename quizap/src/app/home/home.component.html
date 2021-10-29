@@ -1,0 +1,40 @@
+<section style="margin: top 20px;margin: bottom 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+               <h1 class="text-center text-danger">Please select departement and question Paper</h1>
+               <div class="form-row">
+                  <div class="form-goup col-md-6" >
+                      <label style="font-size:18px;" class="text-danger">departement</label>
+                      <select class="form-control">
+                          <option selected>Please choose one</option>
+                          <option value="1">Electronics</option>
+                          <option value="1">Computer</option>
+                      </select>
+                  </div>
+                  <div class="form-goup col-md-6" >
+                    <label style="font-size:18px;" class="text-danger">Question Paper</label>
+                    <select class="form-control">
+                        <option selected>Please choose one</option>
+                        <option value="1">Paper 1</option>
+                        <option value="1">Paper 2</option>
+                    </select>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-danger">paper 1</h4><br>
+                   <h6 class="card-subtile mb-2 text-muted">
+                   <span class="text-danger">Marks</span>100
+                   <span class="text-danger pl-5">Total Question</span>100
+                   </h6>
+                   <p>Click on Button for Star Exam</p>
+                   <div >
+                     <button class="btn btn-primary" [routerLink]="'/question'">Start</button>  
+                   </div>
+                </div>
+               </div> 
+            </div>
+        </div>
+
+    </div>
+</section>    
+<router-outlet></router-outlet>
